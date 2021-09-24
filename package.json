@@ -18,7 +18,8 @@
     "react-table",
     "datagrid"
   ],
-  "main": "index.js",
+  "main": "./dist/react-table-production.esm.min.js",
+  "module": "./dist/react-table-production.esm.min.js",
   "scripts": {
     "test": "is-ci \"test:ci\" \"test:dev\"",
     "test:dev": "jest --watch",

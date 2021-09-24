@@ -11,18 +11,60 @@ const globals = {
 }
 
 export default [
+  // {
+  //   input: 'src/index.js',
+  //   output: {
+  //     name: 'ReactTable',
+  //     file: 'dist/react-table.development.js',
+  //     format: 'umd',
+  //     sourcemap: true,
+  //     globals,
+  //   },
+  //   external,
+  //   plugins: [
+  //     replace({
+  //       'process.env.NODE_ENV': `"development"`,
+  //       delimiters: ['', ''],
+  //     }),
+  //     babel(),
+  //     externalDeps(),
+  //   ],
+  // },
+  // {
+  //   input: 'src/index.js',
+  //   output: {
+  //     name: 'ReactTable',
+  //     file: 'dist/react-table.production.min.js',
+  //     format: 'umd',
+  //     sourcemap: true,
+  //     globals,
+  //   },
+  //   external,
+  //   plugins: [
+  //     replace({ 'process.env.NODE_ENV': `"production"`, delimiters: ['', ''] }),
+  //     babel(),
+  //     externalDeps(),
+  //     terser(),
+  //     size({
+  //       writeFile: false,
+  //     }),
+  //   ],
+  // },
   {
     input: 'src/index.js',
     output: {
       name: 'ReactTable',
-      file: 'dist/react-table.development.js',
-      format: 'umd',
+      file: 'dist/react-table.development.esm.js',
+      format: 'esm',
       sourcemap: true,
       globals,
     },
     external,
     plugins: [
-      replace({ 'process.env.NODE_ENV': `"development"`, delimiters: ['', ''] }),
+      replace({
+        'process.env.NODE_ENV': `"development"`,
+        delimiters: ['', ''],
+      }),
       babel(),
       externalDeps(),
     ],
@@ -31,8 +73,8 @@ export default [
     input: 'src/index.js',
     output: {
       name: 'ReactTable',
-      file: 'dist/react-table.production.min.js',
-      format: 'umd',
+      file: 'dist/react-table.production.esm.min.js',
+      format: 'esm',
       sourcemap: true,
       globals,
     },
